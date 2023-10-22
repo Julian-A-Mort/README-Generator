@@ -49,9 +49,8 @@ To use this project, follow these steps:
 
 ## Walkthrough Video
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[Click here to watch the walkthrough video](./videos/walkthrough_video.mp4)
 
-Click on the image above to watch the walkthrough video.
 
   
 ## License
