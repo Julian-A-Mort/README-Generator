@@ -14,31 +14,30 @@ A command-line application that accepts user inputs to generate a high-quality, 
 
 Follow these steps to install and run the project:
 
-    ### Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-    Before you begin, ensure you have met the following requirements:
-    - **Node.js**: Download and install [Node.js](https://nodejs.org/) (which includes [npm](http://npmjs.com)) on your computer.
+```sh
+- **Node.js**: Download and install [Node.js](https://nodejs.org/) (which includes [npm](http://npmjs.com)) on your computer.
+```
 
-    ### Setup
+1. Clone the repository:
+```sh
+git clone https://github.com/Julian-A-Mort/README-generator.git
+```
 
-    1. Clone the repository:
-    ```sh
-    git clone https://github.com/Julian-A-Mort/README-generator.git
-    ```
+2. Navigate to the directory
 
-    2. Navigate to the directory
+3. install the necessary dependencies 
+```sh
+npm install
+```
 
-    3. install the necessary dependencies 
-    ```sh
-    npm install
-    ```
+4. Open the terminal in the project directory and run the following command:
+```sh
+node index.js
+```
 
-    4. Open the terminal in the project directory and run the following command:
-    ```sh
-    node index.js
-    ```
-
-    5. Follow the prompts to generate the readme file
+5. Follow the prompts to generate the readme file
   
 ## Usage
 

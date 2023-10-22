@@ -1,8 +1,8 @@
 
-  # Mort ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+  # Mort's Adventure Game ![License](https://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
-  Mort
+  A simple game where you take Mort the Puppy on an adventure
   
   ## Table of Contents
   * [Installation](#installation)
@@ -14,11 +14,11 @@
   
   ## Installation
   ```
-  M
+  Download from Github etc etc
   ```
   
   ## Usage
-  m
+  Use the keys to move him etc etc
   
   
   ## License
@@ -28,14 +28,14 @@
   
   
   ## Contributing
-  m
+  Feel free to do it etc etc
   
   ## Tests
   To run tests, run the following command:
   ```
-  m
+  go to a complicated and annoying testing page and test forever
   ```
   
   ## Questions
-  If you have any questions about this repo, then please open an issue or contact me on GitHub at [mmm](https://github.com/mmm) or directly at sydneywine@gmail.com.
+  If you have any questions about this repo, then please open an issue or contact me on GitHub at [Julian-A-Mort](https://github.com/Julian-A-Mort) or directly at julian@wheresnick.com.au.
   
