@@ -1,8 +1,8 @@
 
-  # test ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+  # Mort's Puppy Adventure App ![License](https://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
-  test
+  A quick game where you take Mort around the city
   
   ## Table of Contents
   * [Installation](#installation)
@@ -14,11 +14,11 @@
   
   ## Installation
   ```
-  test
+  download
   ```
   
   ## Usage
-  test
+  Hit some keys and make some noise
   
   
   ## License
@@ -28,14 +28,14 @@
   
   
   ## Contributing
-  test
+  Please do so
   
   ## Tests
   To run tests, run the following command:
   ```
-  test
+  test test test forever always testing test test
   ```
   
   ## Questions
-  If you have any questions about this repo, then please open an issue or contact me on GitHub at [test](https://github.com/test) or directly at test@test.com.
+  If you have any questions about this repo, then please open an issue or contact me on GitHub at [Julian-A-Mort](https://github.com/Julian-A-Mort) or directly at julian@wheresnick.com.au.
   
