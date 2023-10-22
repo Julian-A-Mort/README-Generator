@@ -6,8 +6,8 @@ A command-line application that accepts user inputs to generate a high-quality, 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Walkthrough Video](#walkthrough-video)
 * [License](#license)
-* [Contributing](#contributing)
 * [Questions](#questions)
   
 ## Installation
@@ -46,7 +46,13 @@ To use this project, follow these steps:
 1. **Start the Application**: Run `node index.js` in your terminal to start the application.
 2. **Answer the Prompts**: Respond to the prompts in your terminal to input information for your README.
 3. **Access Your README**: Once complete, retrieve your generated README file from the `generated_readme_files` directory.
- 
+
+## Walkthrough Video
+
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+Click on the image above to watch the walkthrough video.
+
   
 ## License
 Unlicensed 
