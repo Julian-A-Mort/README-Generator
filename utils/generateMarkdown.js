@@ -1,18 +1,49 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+//license information
+function renderLicenseBadge(license) {
+  if (license !== 'None') {
+    return `![License](https://img.shields.io/badge/license-${encodeURIComponent(license.replace(" ", "_"))}-blue.svg)`;
+  }
+  return '';
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    switch (license) {
+      case 'MIT':
+        return 'https://opensource.org/licenses/MIT';
+      case 'GPLv3':
+        return 'https://www.gnu.org/licenses/gpl-3.0';
+      case 'Apache 2.0':
+        return 'https://opensource.org/licenses/Apache-2.0';
+      case 'BSD 3-Clause':
+        return 'https://opensource.org/licenses/BSD-3-Clause';
+      default:
+        return ''; 
+    }
+  }
+  return '';
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === 'None') {
+    return '';
+  }
+  const licenseBadge = renderLicenseBadge(license);
+  const licenseLink = renderLicenseLink(license);
+  return `
+  ## License
+  This project is licensed under the [${license}](${licenseLink}) license.
+  ${licenseBadge}
+  `;
+}
 
+//markdown function
 function generateMarkdown(data) {
+
+  const licenseBadge = renderLicenseBadge(data.license);
+  const licenseSection = renderLicenseSection(data.license);
   
-return `
+  return `
   # ${data.title} ${licenseBadge}
   
   ## Description
@@ -34,8 +65,8 @@ return `
   ## Usage
   ${data.usage}
   
-  ## License
-  This project is licensed under the ${data.license} license.
+  ${licenseSection}
+  
   
   ## Contributing
   ${data.contributing}
@@ -51,4 +82,9 @@ return `
   `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {
+  generateMarkdown,
+  renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection
+};
