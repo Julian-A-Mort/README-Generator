@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 const questions = [
     {
@@ -59,16 +61,14 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function generateMarkdown(data) {
         const licenseBadge = data.license !== 'None' ? `![License](https://img.shields.io/badge/license-${encodeURIComponent(data.license.replace(" ", "_"))}-blue.svg)` : '';
 
-
-        const readmeContent = `
-      # ${data.title}
+    return `
+      # ${data.title} ${licenseBadge}
       
       ## Description
-      ${data.description}s
+      ${data.description}
       
       ## Table of Contents
       * [Installation](#installation)
@@ -99,14 +99,18 @@ function writeToFile(fileName, data) {
       \`\`\`
       
       ## Questions
-      If you have any questions about the repo, open an issue or contact [${data.username}](https://github.com/${data.username}) directly at ${data.email}.
+      If you have any questions about this repo, then please open an issue or contact me on GitHub at [${data.username}](https://github.com/${data.username}) or directly at ${data.email}.
       `;
+}
 
-      fs.writeFile(fileName, readmeContent, (err) => {
+function writeToFile(fileName, data) {
+    const readmeContent = generateMarkdown(data);
+    fs.writeFile(fileName, readmeContent, (err) => {
         if (err) {
-          console.error('There was an error writing the README file:', err);
+        console.error('There was an error writing your README file:', err);
+      
         } else {
-          console.log('README file created successfully!');
+          console.log('README file created successfully! Well Done!!!! Go Team!!!!');
         }
       });
 }
