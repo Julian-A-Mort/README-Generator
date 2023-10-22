@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
@@ -61,51 +62,11 @@ const questions = [
 
 ];
 
-function generateMarkdown(data) {
-        const licenseBadge = data.license !== 'None' ? `![License](https://img.shields.io/badge/license-${encodeURIComponent(data.license.replace(" ", "_"))}-blue.svg)` : '';
-
-    return `
-      # ${data.title} ${licenseBadge}
-      
-      ## Description
-      ${data.description}
-      
-      ## Table of Contents
-      * [Installation](#installation)
-      * [Usage](#usage)
-      * [License](#license)
-      * [Contributing](#contributing)
-      * [Tests](#tests)
-      * [Questions](#questions)
-      
-      ## Installation
-      \`\`\`
-      ${data.installation}
-      \`\`\`
-      
-      ## Usage
-      ${data.usage}
-      
-      ## License
-      This project is licensed under the ${data.license} license.
-      
-      ## Contributing
-      ${data.contributing}
-      
-      ## Tests
-      To run tests, run the following command:
-      \`\`\`
-      ${data.tests}
-      \`\`\`
-      
-      ## Questions
-      If you have any questions about this repo, then please open an issue or contact me on GitHub at [${data.username}](https://github.com/${data.username}) or directly at ${data.email}.
-      `;
-}
-
 function writeToFile(fileName, data) {
     const readmeContent = generateMarkdown(data);
-    fs.writeFile(fileName, readmeContent, (err) => {
+    const outputPath = path.join(__dirname, './generated_readme_files', fileName)
+
+    fs.writeFile(outputPath, readmeContent, (err) => {
         if (err) {
         console.error('There was an error writing your README file:', err);
       
