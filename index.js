@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const generateMarkdown = require('./utils/generateMarkdown');
+const markdown = require('./utils/generateMarkdown');
 
-
+//readme prompts
 const questions = [
     {
         type: 'input',
@@ -62,8 +62,9 @@ const questions = [
 
 ];
 
+//write data to file
 function writeToFile(fileName, data) {
-    const readmeContent = generateMarkdown(data);
+    const readmeContent = markdown.generateMarkdown(data);
     const outputPath = path.join(__dirname, './generated_readme_files', fileName)
 
     fs.writeFile(outputPath, readmeContent, (err) => {
@@ -76,8 +77,17 @@ function writeToFile(fileName, data) {
       });
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+//function to init app
+function init() {
+    inquirer.prompt(questions)
+        .then((answers) => {
+            const fileName = "README.md";
+            writeToFile(fileName, answers);
+        })
+        .catch((error) => {
+            console.error('An error occurred during the initialization:', error);
+        });
+}
 
 // Function call to initialize app
 init();
